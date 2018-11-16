@@ -4,7 +4,7 @@
 The crowd density estimation method, which is applied to crowded scenes, has been widely used in airports, stations, operating vehicles, art galleries, etc. because of its accuracy and speed far above the naked eye count. It can effectively prevent hidden dangers such as crowded trampling and overloading, and on the other hand, it can help retailers to collect passenger traffic.
 The training and test pictures used in this competition are all from the general monitoring scene, but include a variety of perspectives (such as low altitude, high altitude, fisheye, etc.), the relative size of the pedestrians in the map will also have a large difference. Some training data refer to public data sets (such as ShanghaiTech [1], UCF-CC-50 [2], WorldExpo'10 [3], Mall [4], etc.).
 
-![1542369222453](img\1542369222453.png)
+![1542369222453](img/1542369222453.png)
 
 ## Our Model
 Population density estimates can be divided into three main categories: detection-based methods, regression-based methods, and density estimation-based methods.
@@ -20,7 +20,7 @@ In order to improve the accuracy of prediction, we intend to train different par
 
 We selected k images for each of types of images, then performed image retrieval for each image set, and used the image retrieval results to divide the dataset into three categories, and then trained the three types of images separately.
 
-![1542369041510](img\1542369041510.png)
+![1542369041510](img/1542369041510.png)
 
 ### Density Map
 
@@ -30,14 +30,14 @@ G_σ=  1/(2 πσ) e^(-(x^2+y^2)/2σ^2 )
 
 Although this step seems unremarkable, it provides the possibility of training for convolutional neural networks, and because of the size of the density map and the original image, we can focus on designing a convolutional network without the need for dense layers. Not affected by the size of the image.
 
-![1542369133474](img\1542369133474.png)
+![1542369133474](img/1542369133474.png)
 
 ### Deep CNN Network
 
 Our network is divided into two parts. The front layer is the VGG16 layer. After the vgg16 convolution layer and the four pooling layers, the size of the picture becomes 1/8 of the original. The latter layer is the
 dilated  convolution part.  we modify the dense layer of vgg to a number of dilated convolutions.
 
-![1542369196522](img\1542369196522.png)
+![1542369196522](img/1542369196522.png)
 
 ## references
 
