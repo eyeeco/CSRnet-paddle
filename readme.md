@@ -8,9 +8,9 @@ The training and test pictures used in this competition are all from the general
 Population density estimates can be divided into three main categories: detection-based methods, regression-based methods, and density estimation-based methods.
 The fundamental idea of the proposed design is to deploy a deeper CNN for capturing high-level features with larger receptive fields and generating high-quality densitymaps without brutally expanding network complexity.
 Coupled with the analysis of the above problems, we propose such a model framework
-> Data Partition
-> Density Map
-> Deep CNN network
+* Data Partition
+* Density Map
+* Deep CNN network
 
 ## references
 [1] Zhang, Y., Zhou, D., Chen, S., Gao, S., & Ma, Y. (2016). Single-image crowd counting via multi-column convolutional neural network. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 589-597).
